@@ -1,0 +1,117 @@
+export const categories = [
+  { name: 'Invitations', image: 'photo-1519741497674-611481863552' },
+  { name: 'Decorations', image: 'photo-1464366400600-7168b8af9bc3' },
+  { name: 'Wedding favours', image: 'photo-1523438885200-e635ba2c371e' },
+  { name: 'Bridal accessories', image: 'photo-1537633552985-df8429e8048b' },
+  { name: 'Tableware', image: 'photo-1511795409834-ef04bbd61622' },
+]
+
+export const products = [
+  {
+    id: 'p1',
+    name: 'The Garden Suite',
+    category: 'Invitations',
+    price: 68,
+    stock: 24,
+    featured: true,
+    label: 'Bestseller',
+    description: 'A romantic invitation suite with delicate botanical details, printed on softly textured ivory stock.',
+    image: 'photo-1523438885200-e635ba2c371e',
+  },
+  {
+    id: 'p2',
+    name: 'Linen Table Runner',
+    category: 'Tableware',
+    price: 145,
+    stock: 12,
+    featured: true,
+    description: 'Washed natural linen brings a relaxed, considered finish to your celebration table.',
+    image: 'photo-1511795409834-ef04bbd61622',
+  },
+  {
+    id: 'p3',
+    name: 'Dried Flower Place Cards',
+    category: 'Wedding favours',
+    price: 42,
+    stock: 0,
+    featured: true,
+    label: 'Sold out',
+    description: 'Hand-finished place cards paired with a tiny bundle of seasonal dried florals.',
+    image: 'photo-1519741497674-611481863552',
+  },
+  {
+    id: 'p4',
+    name: 'Pearl Hair Vine',
+    category: 'Bridal accessories',
+    price: 189,
+    stock: 8,
+    featured: true,
+    label: 'Made to order',
+    description: 'An airy, hand-wired hair vine with luminous pearls for an effortless bridal look.',
+    image: 'photo-1537633552985-df8429e8048b',
+  },
+  {
+    id: 'p5',
+    name: 'Ceremony Candle Set',
+    category: 'Decorations',
+    price: 96,
+    stock: 18,
+    description: 'Sculptural ivory tapers in a set of four, made for the little moments that glow.',
+    image: 'photo-1464366400600-7168b8af9bc3',
+  },
+  {
+    id: 'p6',
+    name: 'Wildflower Vow Book',
+    category: 'Invitations',
+    price: 55,
+    stock: 31,
+    description: 'A keepsake pair of vow books wrapped in a soft-touch cover with a wildflower illustration.',
+    image: 'photo-1511285560929-80b456fea0bc',
+  },
+  {
+    id: 'p7',
+    name: 'Olive Branch Napkin Rings',
+    category: 'Tableware',
+    price: 118,
+    stock: 15,
+    description: 'A set of four brushed brass napkin rings inspired by the quiet beauty of olive branches.',
+    image: 'photo-1511795409834-ef04bbd61622',
+  },
+  {
+    id: 'p8',
+    name: 'Petal Confetti Cones',
+    category: 'Wedding favours',
+    price: 38,
+    stock: 42,
+    description: 'Biodegradable cones filled with fragrant, naturally dried petals for your grand exit.',
+    image: 'photo-1523438885200-e635ba2c371e',
+  },
+  {
+    id: 'p9',
+    name: 'Heirloom Ribbon Bouquet',
+    category: 'Bridal accessories',
+    price: 72,
+    stock: 6,
+    description: 'Hand-dyed silk ribbons in soft champagne and sage, finished with delicate frayed edges.',
+    image: 'photo-1537633552985-df8429e8048b',
+  },
+  {
+    id: 'p10',
+    name: 'Sage Table Number Set',
+    category: 'Decorations',
+    price: 84,
+    stock: 20,
+    description: 'A set of elegant, arched table numbers in a muted sage finish with a subtle paper grain.',
+    image: 'photo-1464366400600-7168b8af9bc3',
+  },
+]
+
+export const imageUrl = (photo, width = 900) =>
+  `https://images.unsplash.com/${photo}?auto=format&fit=crop&w=${width}&q=85`
+
+export const formatPrice = (amount) =>
+  new Intl.NumberFormat('en-MY', {
+    style: 'currency',
+    currency: 'MYR',
+    maximumFractionDigits: 0,
+  }).format(amount).replace('MYR', 'RM')
